@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        /* display: ; */
+        margin-inline: auto;
+        text-align: center;        
+    };
+    tbody.th{
+      /* text-align: center; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    };
+
+</style>
+<body style=" width: 80%; margin: auto;">
+   <div style="display: flex; gap: 7px; margin: 20px 0;">
+    <select style="padding: 10px; border: 1 solid red;  font-size: 100px;" name="" id="network">
+        <option style="background-color: yellow;" value="MTN">MTN</option>
+        <option style="background-color: green;" value="Glo">Glo</option>
+        <option style="background-color: red;" value="Airtel">Airtel</option>
+        <option style="background-color: blue;" value="9mobile">9mobilre</option>
+    </select>
+    <select style="padding: 10px; border: 1 solid red; font-size: 100px;"  id="amount">
+        <option value="100">100</option>
+        <option value="200">200</option>
+        <option value="500">500</option>
+        <option  value="1000">1000</option>
+    </select>
+   </div>
+  <div style="display: flex; justify-content: space-between;">
+    <div >
+        <div>
+            <input style="padding: 10px 20px; font-size: 20px;" id="generatedCode" type="text"> 
+            <button style="padding: 14px 20px; font-size: 18px; background-color: red; color: white; border: none;  border-radius: 6px;" onclick="generateCode()" >generate code</button>
+        </div>
+    
+        <div>
+            <button style="padding: 10px 20px;  font-size: 18px;  background-color: green; border: none; margin: 5px 0; color: white; " onclick="saveCode()">save code</button>
+        </div>
+       </div>
+      <div>
+        <input  style="padding: 10px 20px; font-size: 20px;" id="rechargeInput" type="text">
+        <button  style="padding: 14px 20px;  font-size: 18px; background-color: blue; color: white; border: none;  border-radius: 6px;" onclick="rechargeCarde()">recharge pin</button>
+       
+      </div>
+  </div>
+    <h2>card Table</h2>
+    <table border="">
+        <tr>
+            <th>S/N</th>
+            <th>price</th>
+            <th>sim</th>
+            <th>code</th>
+            <th>pin</th>
+            <th>status</th>
+            <th>date created</th>
+            <th>date used</th>
+            <th>Action</th>
+        </tr>
+       <tbody id="cardTable">
+        
+   
+       </tbody>
+      
+    </table>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
